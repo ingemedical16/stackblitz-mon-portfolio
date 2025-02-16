@@ -8,7 +8,7 @@ const Header = () => {
       <nav className="container mx-auto p-4 flex justify-between items-center">
         {/* Logo Section */}
         <div className="flex items-center space-x-3">
-          <img
+          <Image
             src="/images/logo.png"
             alt="X-Dev - Innovative Development Solutions"
             width={40}
