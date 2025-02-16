@@ -5,7 +5,7 @@ export default function Projects() {
     <div className="min-h-screen bg-gray-50 p-6">
     <h1 className="text-3xl font-bold text-center text-gray-800">Mes Projets</h1>
     <p className="text-center text-gray-600 mt-2">
-      Voici quelques projets réalisés lors de ma formation à l'IFCOP en tant que développeur Full Stack JavaScript.
+      Voici quelques projets réalisés lors de ma formation à l&apos;IFCOP en tant que développeur Full Stack JavaScript.
     </p>
   
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
