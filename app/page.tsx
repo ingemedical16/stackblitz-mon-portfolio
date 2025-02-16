@@ -20,7 +20,7 @@ export default function Home() {
         Développeur Full-Stack JavaScript / TypeScript
       </p>
       <p className="text-gray-500 mt-2 max-w-md text-center">
-        Je construis des applications web modernes avec React, Next.js,Angular Node.js
+        Je construis des applications web modernes avec React, Next.js, Angular, Node.js
         et MongoDB.
       </p>
 
