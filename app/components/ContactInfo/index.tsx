@@ -12,7 +12,7 @@ const ContactInfo = () => {
         </div>
         <div className="flex items-center space-x-3">
           <Mail className="w-5 h-5 text-gray-600" />
-          <span>mohammedelidrissi.fr78@gmail.com</span>
+          <span>contact.x.dev.js@gmail.com</span>
         </div>
         <div className="flex items-center space-x-3">
           <MapPin className="w-5 h-5 text-gray-600" />
