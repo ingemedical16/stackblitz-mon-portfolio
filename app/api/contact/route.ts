@@ -20,13 +20,12 @@ export async function POST(req: Request) {
 
     // Configure Nodemailer
     const transporter = nodemailer.createTransport({
-      host: HOST,
-      port: PORT,
-      secure: false, // true for port 465, false for 587
+      host: "live.smtp.mailtrap.io",
+      port: 587,
       auth: {
-        user: AUTH_USER,
-        pass: AUTH_PASS,
-      },
+        user: "api",
+        pass: "a9c1af3ce05c4b9438092e812e086c99"
+      }
     });
 
     // Email options
