@@ -11,15 +11,21 @@ export async function POST(req: Request) {
         { status: 400 }
       );
     }
+    const HOST = process.env.EMAIL_HOST
+    const PORT = Number(process.env.EMAIL_PORT)
+    const AUTH_USER = process.env.EMAIL_USER
+    const AUTH_PASS = process.env.EMAIL_PASS
+
+    console.log("check env",HOST,PORT,AUTH_USER,AUTH_PASS)
 
     // Configure Nodemailer
     const transporter = nodemailer.createTransport({
-      host: process.env.EMAIL_HOST,
-      port: Number(process.env.EMAIL_PORT),
+      host: HOST,
+      port: PORT,
       secure: false, // true for port 465, false for 587
       auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
+        user: AUTH_USER,
+        pass: AUTH_PASS,
       },
     });
 
