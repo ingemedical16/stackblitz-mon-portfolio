@@ -14,7 +14,7 @@ const CVPage = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          <CVHeader name="Mohammed El Idrissi" title="Développeur Full-Stack" imageUrl="/profile.jpg" />
+          <CVHeader name="Mohammed El Idrissi" title="Développeur Full-Stack" imageUrl="/images/profile.jpg" />
           <CVExperience experiences={[
             { company: 'Rent A Car', role: 'Développeur Full-Stack', duration: 'Octobre 2023 – Présent', description: "Développement Backend avec Node.js, Express.js et MongoDB. Intégration de Strapi et amélioration de l'UX/UI pour les pages B2B." },
             { company: 'DIVERS MARKET SRL', role: 'Développeur Web', duration: '2018-2019', description: 'Développement de sites web et applications avec HTML, CSS, JavaScript/jQuery.' }
