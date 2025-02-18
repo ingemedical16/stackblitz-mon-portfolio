@@ -12,7 +12,7 @@ export default function Projects() {
       <ProjectCard
         title="Facebook Clone"
         description="Un clone avancé de Facebook avec React et Redux."
-        link="https://code-x-dev.vercel.app/"
+        link="https://code-freelance.dev/"
       />
       <ProjectCard
         title="Facebook Clone Backend"
