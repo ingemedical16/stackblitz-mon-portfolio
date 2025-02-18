@@ -28,6 +28,8 @@ const Navbar: React.FC = () => {
         {[
           { href: '/', label: 'Accueil' },
           { href: '/projects', label: 'Projets' },
+          { href: '/cv/mohammed-elidrissi', label: 'cv' },
+          { href: '/presentation', label: 'Presentation' },
           { href: '/contact', label: 'Contact' },
         ].map(({ href, label }) => (
           <li key={href}>
