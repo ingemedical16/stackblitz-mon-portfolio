@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
 const slides = [
@@ -29,23 +29,33 @@ export default function PresentationPage() {
   };
 
   return (
-    <div className="h-screen w-screen flex flex-col items-center justify-center bg-gray-900 text-white relative overflow-hidden">
-      <motion.div 
-        key={currentSlide} 
-        initial={{ opacity: 0, x: 50 }} 
-        animate={{ opacity: 1, x: 0 }} 
-        exit={{ opacity: 0, x: -50 }} 
-        transition={{ duration: 0.5 }}
-        className="text-center p-8 max-w-3xl"
-      >
-        <h1 className="text-4xl font-bold mb-4">{slides[currentSlide].title}</h1>
-        <p className="text-lg mb-6">{slides[currentSlide].content}</p>
-        <Image src={slides[currentSlide].image} alt={slides[currentSlide].title} width={600} height={300} className="rounded-lg shadow-lg" />
-      </motion.div>
+    <div className="h-screen w-screen flex items-center justify-center bg-gray-900 text-white relative overflow-hidden">
+      <AnimatePresence mode="wait">
+        <motion.div 
+          key={currentSlide} 
+          initial={{ opacity: 0, x: 100 }} 
+          animate={{ opacity: 1, x: 0 }} 
+          exit={{ opacity: 0, x: -100 }} 
+          transition={{ duration: 0.5 }}
+          className="absolute h-full w-full flex flex-col items-center justify-center p-8"
+        >
+          <h1 className="text-5xl font-bold mb-6 text-center">{slides[currentSlide].title}</h1>
+          <p className="text-xl mb-6 text-center max-w-4xl">{slides[currentSlide].content}</p>
+          <div className="relative w-full h-3/5 flex items-center justify-center">
+            <Image 
+              src={slides[currentSlide].image} 
+              alt={slides[currentSlide].title} 
+              layout="fill" 
+              objectFit="cover" 
+              className="rounded-lg shadow-lg" 
+            />
+          </div>
+        </motion.div>
+      </AnimatePresence>
 
       <div className="absolute bottom-8 flex space-x-4">
-        <button onClick={prevSlide} className="px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded">Précédent</button>
-        <button onClick={nextSlide} className="px-4 py-2 bg-blue-500 hover:bg-blue-400 rounded">Suivant</button>
+        <button onClick={prevSlide} className="px-6 py-3 bg-gray-700 hover:bg-gray-600 rounded-lg text-lg">Précédent</button>
+        <button onClick={nextSlide} className="px-6 py-3 bg-blue-500 hover:bg-blue-400 rounded-lg text-lg">Suivant</button>
       </div>
     </div>
   );
